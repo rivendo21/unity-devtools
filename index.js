@@ -1,3 +1,5 @@
+// For the description you will need to add a "description" field to each item in the data array, sane fir the image.
+
 const data = [
   {
     title: "GIF to MP4 Converter",
@@ -183,7 +185,7 @@ categories.forEach((category) => {
     card.className = "card";
     const cardImage = document.createElement("div");
     cardImage.className = "card-image";
-    cardImage.style.backgroundImage = `url(${item.image || "https://via.placeholder.com/300x150/333/666?text=No+Image"})`;
+    cardImage.style.backgroundImage = `url(${item.image || "image placeholder"})`;
 
     const cardContent = document.createElement("div");
     cardContent.className = "card-content";
@@ -194,7 +196,8 @@ categories.forEach((category) => {
 
     const cardDesc = document.createElement("p");
     cardDesc.className = "card-description";
-    cardDesc.textContent = item.description;
+
+    cardDesc.textContent = item.description || "description placeholder";
 
     cardContent.appendChild(cardTitle);
     cardContent.appendChild(cardDesc);

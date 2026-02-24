@@ -1,7 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Oswald";
   margin: 0;
   padding: 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,6 +17,30 @@ body {
 h1 {
   text-align: center;
   width: 100%;
+}
+
+button {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #28506b;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+button:hover {
+  background-color: #28506b8f;
+  cursor: pointer;
 }
 
 #main-content {
@@ -38,6 +67,15 @@ nav {
   box-sizing: border-box;
 }
 
+.bottom-link {
+  margin: 30px;
+  padding: 10px;
+  background-color: #28506b;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
 p {
   max-width: 600px;
   text-align: center;
@@ -48,19 +86,23 @@ p {
 }
 
 .converter {
-  color: #e74c3c;
+  color: #ffffff;
+  border-bottom: 5px solid #194144;
 }
 
 .generator {
-  color: #3498db;
+  color: #ffffff;
+  border-bottom: 5px solid #b13030;
 }
 
 .tool {
-  color: #2ecc71;
+  color: #ffffff;
+  border-bottom: 5px solid #155318;
 }
 
 .browser {
-  color: #9b59b6;
+  color: #ffffff;
+  border-bottom: 5px solid #56207a;
 }
 
 .logo {
@@ -108,6 +150,10 @@ p {
 
 .card-content {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
 }
 
 .card-title {
@@ -115,6 +161,7 @@ p {
   font-size: 1.1rem;
   font-weight: 600;
   color: #009fff;
+  text-align: center;
 }
 
 .card-description {
@@ -122,12 +169,18 @@ p {
   font-size: 0.9rem;
   color: #dfdfdf;
   line-height: 1.4;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #grid-main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-top: 30px;
   justify-content: center;
   gap: 50px;
   width: 100%;
@@ -140,7 +193,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   background-color: #3d3d3d62;
-  padding: 15px;
+  padding: 10px;
   border-radius: 20px;
   gap: 25px;
 }
@@ -148,7 +201,6 @@ p {
 #grid-main h1 {
   font-size: 1.8rem;
   margin-top: 0;
-  border-bottom: 10px solid #1170774b;
   padding-bottom: 15px;
   width: 100%;
   display: flex;
