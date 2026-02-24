@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 50px;
 }
 
 body {
@@ -43,6 +44,12 @@ button:hover {
   cursor: pointer;
 }
 
+#grid-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
 #main-content {
   display: flex;
   flex-direction: row;
@@ -76,6 +83,11 @@ nav {
   text-decoration: none;
 }
 
+.bottom-link:hover {
+  background-color: #28506b8f;
+  cursor: pointer;
+}
+
 p {
   max-width: 600px;
   text-align: center;
@@ -85,22 +97,22 @@ p {
   margin: 20px auto;
 }
 
-.converter {
+#converter {
   color: #ffffff;
   border-bottom: 5px solid #194144;
 }
 
-.generator {
+#generator {
   color: #ffffff;
   border-bottom: 5px solid #b13030;
 }
 
-.tool {
+#tool {
   color: #ffffff;
   border-bottom: 5px solid #155318;
 }
 
-.browser {
+#browser {
   color: #ffffff;
   border-bottom: 5px solid #56207a;
 }
