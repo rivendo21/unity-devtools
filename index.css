@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  overflow-x: hidden;
 }
 
 body {
@@ -69,6 +70,20 @@ nav p {
   line-height: 2;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: 1;
+  justify-content: center;
+}
+
 nav {
   background-color: #1a1a1a;
   padding: 15px 40px;
@@ -87,6 +102,12 @@ nav {
   gap: 30px;
   z-index: 1001;
   position: relative;
+  flex: 1;
+  justify-content: center;
+}
+
+.hamburger {
+  display: none;
 }
 
 .nav-buttons a {
@@ -111,8 +132,10 @@ nav {
   color: white;
   background-color: #28506b;
   border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 
-  display: inline-block;
   margin-top: 15px;
   margin-left: 20px;
 }
@@ -266,4 +289,73 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1200px) {
+  #grid-main a.card {
+    width: 23%;
+    max-width: 23%;
+  }
+}
+
+@media (max-width: 992px) {
+  #grid-main a.card {
+    width: 30%;
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  #grid-main a.card {
+    width: 45%;
+    max-width: 45%;
+  }
+
+  .nav-center {
+    display: none;
+  }
+
+  .nav-right {
+    margin-left: auto;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1002;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-buttons {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #1a1a1a;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .nav-buttons.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  #grid-main a.card {
+    width: 100%;
+    max-width: 100%;
+  }
 }

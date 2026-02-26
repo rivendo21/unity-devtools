@@ -206,3 +206,13 @@ categories.forEach((category) => {
     gridElement.appendChild(card);
   });
 });
+
+// Hamburger menu toggle
+const hamburger = document.getElementById("hamburger");
+const navButtons = document.getElementById("nav-buttons");
+
+if (hamburger && navButtons) {
+  hamburger.addEventListener("click", () => {
+    navButtons.classList.toggle("active");
+  });
+}
