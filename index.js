@@ -1,4 +1,4 @@
-// For the description you will need to add a "description" field to each item in the data array, sane fir the image.
+// For the description you will need to add a "description" field to each item in the data array, same for the image.
 
 const data = [
   {
